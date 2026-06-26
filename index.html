@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Pendaftaran Mahasiswa Baru</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Formulir Pendaftaran Mahasiswa Baru</h1>
+
+  <!-- FORM -->
+  <form id="formDaftar" novalidate>
+    <div class="form-group">
+      <label for="nim">NIM</label>
+      <input type="text" id="nim" name="nim">
+      <span class="error" id="errNim"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama">
+      <span class="error" id="errNama"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+      <span class="error" id="errEmail"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="hp">Nomor HP</label>
+      <input type="text" id="hp" name="hp">
+      <span class="error" id="errHp"></span>
+    </div>
+
+    <div class="form-group">
+      <label>Jenis Kelamin</label>
+      <label class="radio-inline"><input type="radio" name="gender" value="Laki-laki"> Laki-laki</label>
+      <label class="radio-inline"><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+      <span class="error" id="errGender"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="prodi">Program Studi</label>
+      <select id="prodi" name="prodi">
+        <option value="">-- Pilih Program Studi --</option>
+        <option value="Teknik Informatika">Teknik Informatika</option>
+        <option value="Sistem Informasi">Sistem Informasi</option>
+        <option value="Manajemen Informatika">Manajemen Informatika</option>
+        <option value="Bisnis Digital">Bisnis Digital</option>
+      </select>
+      <span class="error" id="errProdi"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="alamat">Alamat</label>
+      <textarea id="alamat" name="alamat" rows="3"></textarea>
+      <span class="error" id="errAlamat"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="foto">Pas Foto (JPG/JPEG/PNG, max 2MB)</label>
+      <input type="file" id="foto" name="foto" accept=".jpg,.jpeg,.png">
+      <span class="error" id="errFoto"></span>
+      <div class="preview-box">
+        <img id="previewFoto" src="#" alt="Preview Foto" style="display:none;">
+      </div>
+    </div>
+
+    <div class="form-group btn-group">
+      <button type="submit" id="btnSubmit">Submit</button>
+      <button type="reset" id="btnReset">Reset</button>
+    </div>
+  </form>
+
+  <!-- CARD RINGKASAN -->
+  <div id="cardRingkasan" class="card" style="display:none;">
+    <h2>Ringkasan Data Pendaftaran</h2>
+    <div id="cardContent"></div>
+    <button id="btnEdit">Edit Data</button>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
